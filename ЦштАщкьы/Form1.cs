@@ -17,16 +17,30 @@ namespace ЦштАщкьы
             InitializeComponent();
         }
 
-
-        private void button1_MouseDoubleClick(object sender, MouseEventArgs e)
+        public void Zapis(object sender, EventArgs e)
         {
-            MessageBox.Show("Double click");
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("One click");
-            
+            People people1 = new People();
+            people1.Name = textBox1.Text;
+            people1.Age = Int32.Parse(textBox2.Text);
+            people1.Rost = Int32.Parse(textBox3.Text);
+            people1.Iswork = checkBox1.AutoCheck;
+
+            textBox1.Text = "";
+            checkBox1.AutoCheck = false;
+            textBox2.Text = "";
+            textBox3.Text = "";
+            label5.Text = people1.ToString();
+
         }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
